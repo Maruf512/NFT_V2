@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>Home</h1>
+
+{% for anime in anime_list %}
+
+<div>
+    {% comment %}
+        this is a multiline
+        comments.
+        this is used to take bullet points inside code.
+        this wont be rendard.
+    {% endcomment %}
+
+
+    {% if anime.name == "One Piece" %}
+    <h2>{{ anime.id }} -- {{ anime.name|title }}</h2>
+
+    {% elif anime.name == "Your Name" %}
+    <h2>{{ anime.id }} -- {{ anime.name|title }}</h2>
+
+    {% else %}
+    <h3>{{ anime.id }} -- {{ anime.name|title }}</h3>
+
+    {% endif %}
+
+
+    
+</div>
+
+
+{% endfor %}
+
+{% endblock content %}
