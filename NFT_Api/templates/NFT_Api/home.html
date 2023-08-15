@@ -16,13 +16,13 @@
 
 
     {% if anime.name == "One Piece" %}
-    <h2>{{ anime.id }} -- {{ anime.name|title }}</h2>
+    <h2>{{ anime.id }} -- <a href="room/{{anime.id}}">{{ anime.name|title }}</a></h2>
 
     {% elif anime.name == "Your Name" %}
-    <h2>{{ anime.id }} -- {{ anime.name|title }}</h2>
+    <h2>{{ anime.id }} -- <a href="room/{{anime.id}}">{{ anime.name|title }}</a></h2>
 
     {% else %}
-    <h3>{{ anime.id }} -- {{ anime.name|title }}</h3>
+    <h3>{{ anime.id }} -- <a href="room/{{anime.id}}">{{ anime.name|title }}</a></h3>
 
     {% endif %}
 
