@@ -20,7 +20,5 @@ def room(request, pk):
     for anime in anime_list:
         if anime['id'] == int(pk):
             room_data = anime
-            print(room_data)
-
 
     return render(request, 'NFT_Api/room.html', room_data)
